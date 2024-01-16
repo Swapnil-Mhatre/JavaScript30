@@ -7,6 +7,17 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <script></script>
+    <script>
+      const keypressed = [];
+      const secretCode = 'wesbos';
+      window.addEventListener('keyup', (e) => {
+        keypressed.push(e.key);
+        keypressed.splice(-secretCode.length - 1, keypressed.length - secretCode.length);
+        if (keypressed.join('').includes(secretCode)) {
+          console.log("Ding Ding");
+          cornify_add();
+        }
+      })
+    </script>
   </body>
 </html>
