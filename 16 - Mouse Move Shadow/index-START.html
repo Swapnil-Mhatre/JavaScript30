@@ -51,7 +51,7 @@
 
     if (this !== e.target) {
       x = x + e.target.offsetLeft;
-      y = y + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
     }
 
     const xWalk = (Math.floor(x / width * walk) - (walk / 2));
