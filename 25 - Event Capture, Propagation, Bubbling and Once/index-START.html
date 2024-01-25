@@ -43,7 +43,20 @@
 
 <button></button>
 <script>
+const divs = document.querySelectorAll('div');
+document.body.addEventListener('click', printVal);
 
+function printVal (e) {
+  console.log(this.classList.value)
+  // Used to Stop Bubling event
+  e.stopPropagation();
+}
+
+divs.forEach(div => div.addEventListener('click', printVal, {
+  capture: false,
+  // Used for running the eventListner one time
+  once: true
+}));
 </script>
 </body>
 </html>
